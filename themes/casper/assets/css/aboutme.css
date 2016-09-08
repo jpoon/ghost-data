@@ -1,0 +1,126 @@
+
+.clear {
+    clear:both
+}
+
+ul#works_filter {
+    float:left;
+    clear:both;
+    padding: 0px 0px 25px 0px;
+    margin:0;
+    list-style:none;
+}
+ul#works_filter li {
+    float:left;
+    padding:0;
+    margin:0;
+    padding:0px 5px 0px 5px;
+}
+ul#works_filter li a:link, ul#works_filter li a:visited {
+    font-weight:0;
+    text-decoration:none;
+    display:block;
+    padding:0px 5px 0px 5px;
+}
+ul#works_filter li a:hover, ul#works_filter li a.selected {
+    border-bottom: 1px solid rgba(180, 180, 180, 1);
+}
+
+#works {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+/* GRID */
+#works li {
+    background: rgba(180, 180, 180, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    float: left;
+    position: relative;
+    width: 24%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    margin: 0;
+    padding: 0px !important;
+    list-style:none;
+    text-decoration:none;
+    line-height:1.5em;
+    outline:0;
+}
+
+.ie7 #works li {
+    width: 24%;
+    padding-left:0px !important;
+}
+
+#works li a {
+    display: block;
+}
+
+#works img {
+    display: block;
+    border:0px !important;
+    width: 100%;
+    opacity: .65;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=65)";
+    filter: alpha(opacity=65);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#works li:hover img {
+    opacity: 1;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+
+#works li:hover .original_img, .ie7 #clients li:hover a img, .ie8 #clients li:hover a img {
+    opacity: 1;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+
+#works li:hover .grayscale_img {
+    opacity: 0;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#works .broadcom:hover, #works .broadcom.active {
+    background: #e51837;
+}
+#works .rim:hover, #works .rim.active {
+    background: #0078aa;
+}
+#works .microsoft:hover, #works .microsoft.active {
+    background: #0079b0;
+}
+#works .ubc:hover, #works .ubc.active {
+    background: #eaa001;
+}
+#works .acm:hover, #works .acm.active {
+    background: #7cc0ea;
+}
+#works .ubcbadm:hover, #works .ubcbadm.active {
+    background: #353535;
+}
+#works .weightwatch:hover, #works .weightwatch.active {
+    background: #68217a;
+}
+#works .jeanetteball:hover, #works .jeanetteball.active {
+    background: #952210;
+}
+
+/* Scaffold View */
+#tab-detail {
+    padding: 20px 0px;
+}
