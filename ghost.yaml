@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ghost-service
+  labels:
+    app: ghost
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 13.66.223.172
+  ports:
+    - port: 80
+      targetPort: 2368
+  selector:
+    app: ghost
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ghost-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ghost
+    spec:
+      containers:
+        - name: ghost
+          image: ghost:0.11.1
+          volumeMounts: 
+            - mountPath: /var/lib/ghost
+              name: ghost-data
+          env: 
+            - name: NODE_ENV
+              value: production
+            - name: PUBLIC_URL
+              value: "http://jasonpoon.ca"
+          ports:
+            - containerPort: 2368
+      volumes: 
+        - name: ghost-data
+          azureDisk: 
+            diskName: ghost-data.vhd
+            diskURI: "https://jasonstrgkubernetes.blob.core.windows.net/data-disk/ghost-data.vhd"
