@@ -6,7 +6,7 @@ metadata:
     app: ghost
 spec:
   type: LoadBalancer
-  loadBalancerIP: 13.66.223.172
+  #loadBalancerIP: 13.66.223.172
   ports:
     - port: 80
       targetPort: 2368
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: ghost
-          image: ghost:0.11.1
+          image: ghost:0.11.2
           volumeMounts: 
             - mountPath: /var/lib/ghost
               name: ghost-data
