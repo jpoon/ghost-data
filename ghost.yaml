@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: ghost
-          image: ghost:0.11.2
+          image: ghost:0.11.3
           volumeMounts: 
             - mountPath: /var/lib/ghost
               name: ghost-data
@@ -41,4 +41,4 @@ spec:
         - name: ghost-data
           azureDisk: 
             diskName: ghost-data.vhd
-            diskURI: "https://jasonstrgkubernetes.blob.core.windows.net/data-disk/ghost-data.vhd"
+            diskURI: "https://00kfydpporlglnyagnt0.blob.core.windows.net/ghost/ghost-data.vhd"
