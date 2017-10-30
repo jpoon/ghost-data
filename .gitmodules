@@ -1,0 +1,3 @@
+[submodule "themes/old-casper"]
+	path = themes/old-casper
+	url = git@github.com:jpoon/old-casper.git
