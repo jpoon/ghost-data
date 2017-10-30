@@ -26,9 +26,9 @@ spec:
     spec:
       containers:
         - name: ghost
-          image: ghost:0.11.3
+          image: ghost:1.16
           volumeMounts: 
-            - mountPath: /var/lib/ghost
+            - mountPath: /var/lib/ghost/content
               name: ghost-data
           env: 
             - name: NODE_ENV
